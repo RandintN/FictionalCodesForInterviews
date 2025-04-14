@@ -5,8 +5,6 @@ public class TopNFrequentWords {
     public static List<String> findTopNFrequentWords(List<String> wordsToBeChecked, int topMost) {
         final var lowerCaseWords = wordsToBeChecked.stream().map(String::toLowerCase).toList();
 
-        lowerCaseWords.stream().sorted().distinct().limit(topMost).toList();
-
         return lowerCaseWords.stream()
                 .filter(Objects::nonNull)
                 .map(String::toLowerCase)
